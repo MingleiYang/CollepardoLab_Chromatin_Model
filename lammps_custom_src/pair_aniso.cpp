@@ -177,7 +177,7 @@ void PairAniso::compute(int eflag, int vflag)
       if (rsq < cutsq[itype][jtype]) {
 
         switch (form[itype][jtype]) {
-        case SPHERE_SPHERE:
+        case SPHERE_SPHERE:{
         #ifdef DEBUG
           printf("SS\n");
         #endif
@@ -198,7 +198,7 @@ void PairAniso::compute(int eflag, int vflag)
           fforce[1] = r12[1]*forcelj;
           fforce[2] = r12[2]*forcelj;
           ttor[0] = ttor[1] = ttor[2] = 0.0;
-          rtor[0] = rtor[1] = rtor[2] = 0.0;
+          rtor[0] = rtor[1] = rtor[2] = 0.0;}
           break;
 
         case SPHERE_ELLIPSE:
